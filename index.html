@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shittu Abdul Maliq - Web Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- EmailJS SDK (for client-side form sending). Add your user ID in script below or set dynamically in script.js -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Sam</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Shittu Abdul Maliq</h1>
+            <p class="hero-subtitle">Front-End Web Developer</p>
+            <p class="hero-description">I build beautiful, responsive websites and web applications that users love.</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+        <div class="hero-animation">
+            <div class="floating-box"></div>
+            <div class="floating-box"></div>
+            <div class="floating-box"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hi, I’m <strong>Shittu Abdul Maliq</strong>, a passionate front-end developer with a strong focus on creating clean, engaging, and interactive web experiences. Over the years, I’ve honed my skills in <strong>HTML, CSS, JavaScript, React, Bootstrap and  UI/UX design </strong>, bringing ideas to life through functional and visually appealing websites.</p>
+                    <p>I thrive on transforming designs into responsive, user-friendly interfaces and continuously expanding my knowledge to stay up-to-date with modern web development trends. When I’m not coding, I enjoy exploring creative design concepts and learning new technologies that enhance user experience.</p>
+                    <p>Let’s build something amazing together!</p>
+                </div>
+                <div class="about-stats">
+                    <img src="c:\Users\surdo\Downloads\Business and Finance _ business, work, technology, productivity, innovation, creativity_demo.webp" alt="Shittu Abdul Maliq" class="about-photo" loading="lazy" height="300px" width="300px">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="c:\Users\surdo\OneDrive\Desktop\MALIQ\Potfolio\images\proj1.png" alt="Clear Care Dental Project Screenshot" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Clear Care Dental</h3>
+                        <p>A friendly website to raise awareness about oral health</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Bootstrap</span>
+                        </div>
+                        <a href="https://clearcaredental.netlify.app/" class="project-link" target="_blank" rel="noopener">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="c:\Users\surdo\OneDrive\Desktop\MALIQ\Potfolio\images\proj3.png" alt="Book Listing App Screenshot" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Book Listing App</h3>
+                        <p>A modern app that makes it simple to add, update, delete books and set prices</p>
+                        <div class="project-tags">
+                            <span>Node.js</span>
+                            <span>React</span>
+                            <span>Bootstrap</span>
+                        </div>
+                        <a href="https://bookliistingapp.netlify.app/" class="project-link" target="_blank" rel="noopener">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="c:\Users\surdo\OneDrive\Desktop\MALIQ\Potfolio\images\proj2.png" alt="Weather Forecast App Screenshot" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Weather Forecasts</h3>
+                        <p>A beautiful weather application with real-time data, forecasts, and interactive maps.</p>
+                        <div class="project-tags">
+                            <span>API</span>
+                            <span>React</span>
+                        </div>
+                        <a href="https://nigeriaweatherapp.netlify.app/" class="project-link" target="_blank" rel="noopener">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3></h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">UI/UX</span>
+                        <span class="skill-tag">GIT</span> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-subtitle">I'd love to hear from you. Let's create something amazing together!</p>
+            
+            <div class="contact-content">
+               <form class="contact-form" id="contactForm">
+    <div class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+        <input type="email" name="email" placeholder="Your Email" required>
+    </div>
+    <div class="form-group">
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="submit-button">Send Message</button>
+</form>
+ 
+
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h4>Email</h4>
+                        <p>abdulmalikshittu09@gmail.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Phone</h4>
+                        <p>+234 706 918 5859</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Location</h4>
+                        <p>Lagos, Nigeria</p>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Shittu Abdul Maliq. All rights reserved.</p>
+            <p></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+/* Mobile-first responsive overrides */
+:root{
+  --container-padding: 16px;
+  --max-width: 1100px;
+  --primary-color: #667eea;
+}
+
+/* Basic resets for responsive behavior */
+*{box-sizing:border-box}
+img{max-width:100%;height:auto;display:block}
+.container{padding:0 var(--container-padding);margin:0 auto;max-width:var(--max-width);}
+
+body{font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.6;margin:0}
+
+/* Navigation */
+.navbar .nav-container{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.logo{font-weight:700;font-size:1.2rem}
+.nav-menu{
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 20px 10px;
+    position: fixed;
+    top: 70px;
+    left: -100%; /* hide off-canvas by default */
+    width: 100%;
+    background: var(--surface);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    transition: left 0.28s ease, opacity 0.2s ease;
+    z-index: 9999;
+}
+.nav-menu.active {
+    left: 0; /* slide in */
+    display: block;
+}
+.nav-menu .nav-link{
+    display: block;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-primary); /* use theme color so links are visible on dark bg */
+    text-decoration: none;
+}
+.nav-menu .nav-link:hover {
+    color: var(--primary-color);
+}
+.hamburger{
+    display: block;
+    cursor: pointer;
+    width: 28px;
+    padding: 5px;
+    z-index: 100;
+}
+.hamburger span{
+    display: block;
+    height: 3px;
+    background: var(--text-primary);
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Hero (stacked on mobile) */
+.hero{display:flex;flex-direction:column;align-items:flex-start;padding:40px 0}
+.hero-content{width:100%}
+.hero-title{font-size:2rem;margin:0 0 6px}
+.hero-subtitle{font-size:1.1rem;margin:0 0 12px;color:#444}
+.hero-description{margin-bottom:16px}
+.cta-button{display:inline-block;padding:10px 16px;background:var(--primary-color);color:#fff;border-radius:6px;text-decoration:none}
+.hero-animation{display:flex;gap:8px;margin-top:20px}
+.floating-box{width:40px;height:40px;background:#eee;border-radius:8px}
+
+/* About */
+.about-content{display:flex;flex-direction:column;gap:18px}
+.about-photo{width:100%;max-width:360px;height:auto;border-radius:8px}
+
+/* Projects grid: single column on mobile */
+.projects-grid{display:grid;grid-template-columns:1fr;gap:18px}
+.project-card{background: var(--surface);border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.06);border:1px solid rgba(255,255,255,0.03)}
+.project-image{
+    height: 200px;
+    overflow: hidden;
+}
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+.project-content{padding:12px}
+.project-content h3{color:var(--text-primary);margin:0 0 8px}
+.project-content p{color:var(--text-secondary);margin:0 0 12px}
+.project-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.project-tags span{background:rgba(102,126,234,0.12);color:var(--primary-color);padding:6px 8px;border-radius:6px;font-size:0.85rem}
+
+/* Skills */
+.skills-grid{display:block}
+.skill-items{display:flex;flex-wrap:wrap;gap:8px}
+.skill-tag{background:#f3f4f6;padding:6px 10px;border-radius:999px;font-size:0.9rem}
+
+/* Contact */
+.contact-content{display:flex;flex-direction:column;gap:18px}
+.contact-form,.contact-info{width:100%}
+.form-group input,.form-group textarea{width:100%;padding:10px;border:1px solid #ddd;border-radius:6px}
+.submit-button{background:var(--primary-color);color:#fff;border:none;padding:10px 14px;border-radius:6px}
+
+/* Footer */
+.footer .container{padding:18px 0;text-align:center}
+
+/* Larger screens */
+@media(min-width:700px){
+  .nav-menu{display:flex;gap:20px;align-items:center}
+  .hamburger{display:none}
+  .hero{flex-direction:row;align-items:center;justify-content:space-between}
+  .hero-content{max-width:55%}
+  .hero-animation{max-width:40%;justify-content:flex-end}
+  .about-content{flex-direction:row;align-items:center}
+  .about-text{flex:1;padding-right:20px}
+  .about-stats{flex:0 0 320px}
+  .projects-grid{grid-template-columns:repeat(3,1fr)}
+  .project-image{height:180px}
+  .skills-grid{display:flex}
+  .contact-content{flex-direction:row}
+  .contact-form{flex:1}
+  .contact-info{flex:0 0 320px;padding-left:18px}
+}
+
+@media(min-width:1000px){
+  :root{--container-padding:24px}
+  .hero-title{font-size:2.4rem}
+}
+
+/* Small tweaks for very small screens */
+@media(max-width:360px){
+  .hero-title{font-size:1.6rem}
+  .hero-subtitle{font-size:1rem}
+}
+
+/* Simple accessible focus styles */
+a:focus,a:active,button:focus{outline:3px solid rgba(102,126,234,0.3);outline-offset:3px}
